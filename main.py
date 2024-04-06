@@ -31,10 +31,9 @@ def write_to_csv(data, filename):
 # Main function
 def main():
     search = input("Enter the search term: ")
-    # url = 'https://tdirectory.me/search/kids?sort=relavance#google_vignette'  # Replace 'URL_OF_THE_WEBSITE' with the actual URL
     url = 'https://tdirectory.me/search/' + search + '?sort=relavance#google_vignette'
     data = scrape_website(url)
-    write_to_csv(data, 'scraped_data.csv')
+    write_to_csv(data, "data/" + search + ".csv")
 
 if __name__ == '__main__':
     main()
